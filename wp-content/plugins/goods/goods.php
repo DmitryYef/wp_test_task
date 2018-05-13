@@ -23,15 +23,6 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-/*
-function goods_language_init() {
-	$domain = 'goods';
-	$locale = apply_filters('plugin_locale', get_locale(), $domain);
-	load_textdomain($domain, WP_LANG_DIR.'/plugins/'.$domain.'-'.$locale.'.pot');
-	load_plugin_textdomain($domain, FALSE, dirname(plugin_basename(__FILE__)).'/languages/');
-}
-add_action('plugins_loaded', 'goods_language_init');
- */
 define('GOODS_PLUGIN_PATH', dirname(__FILE__));
 
 require_once( GOODS_PLUGIN_PATH . '/trait.goods-form-fields.php' ); 
