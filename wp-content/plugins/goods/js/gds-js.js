@@ -29,7 +29,7 @@ function delete_attr(meta_id, attr_id){
 
 function switch_state( id, state ){
 	jQuery.ajax({
-		url: "<?php echo admin_url("admin-ajax.php") ?>",
+		url: 'admin-ajax.php',
 		type: "post",
 		data: {action: 'switch_state', gds_id: id, gds_state: state }, 
 		success:function(data){
