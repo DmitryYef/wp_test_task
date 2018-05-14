@@ -72,19 +72,6 @@ function true_fill_post_columns( $column ) {
 		case 'gds_state':
 			$gds_state = get_post_meta( $post->ID, 'gds_state', true );
 		?>
-			<script>
-				function switch_state( id, state ){
-					jQuery.ajax({
-						url: "<?php echo admin_url("admin-ajax.php") ?>",
-						type: "post",
-						data: {action: 'switch_state', gds_id: id, gds_state: state }, 
-						success:function(data){
-							if( data=='OK' ){
-								alert( 'Статус обновлен' );
-							}
-						}});
-				}
-			</script>
 			<p>
 				<input type="radio" class="state_radio" name="gds_state_<?php echo $post->ID; ?>" value="1" onclick="switch_state('<?php echo $post->ID; ?>', 1);" <?php echo $gds_state=="1" ? 'checked="checked"' : '';?> /> В наличии  <br />
 				<input type="radio" class="state_radio" name="gds_state_<?php echo $post->ID; ?>" value="0" onclick="switch_state('<?php echo $post->ID; ?>', 0);" <?php echo $gds_state=="0" ? 'checked="checked"' : '';?>/> Нет на складе  
