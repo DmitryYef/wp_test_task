@@ -8,6 +8,7 @@ trait GoodsColumns{
 	public function post_columns( $my_columns ){
 		$my_columns = array(
 			'cb' => '<input type="checkbox" />',
+			'title' => 'Заголовок товара',
 			'gds_name' => 'Наименование',
 			'gds_price' => 'Цена',
 			'gds_state' => 'Статус',

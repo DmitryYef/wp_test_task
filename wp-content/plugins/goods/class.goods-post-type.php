@@ -34,7 +34,7 @@ class GoodsPostType {
 			'show_in_nav_menus'   => null, 
 			'menu_icon'           => null, 
 			'hierarchical'        => false,
-			'supports'            => array(''), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+			'supports'            => array('title'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 			'taxonomies'          => array('goods_shop_taxonomy'),
 			'has_archive'         => false,
 			'rewrite' 			  => array('slug' => 'goods', 'with_front' => false),
