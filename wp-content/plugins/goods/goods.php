@@ -36,6 +36,9 @@ add_action( 'manage_posts_custom_column', 'true_fill_post_columns', 10, 1 );
 add_action('wp_ajax_get_posts'       , 'get_posts_callback');
 add_action('wp_ajax_nopriv_get_posts', 'get_posts_callback');
 
+wp_register_script( 'gds-js.js', plugin_dir_url( __FILE__ ) . 'js/gds-js.js', array('jquery'));
+wp_enqueue_script( 'gds-js.js' );
+
 function include_template_function( $template_path ) {
     if ( get_post_type() == 'goods' ) {
         if ( is_single() ) {
