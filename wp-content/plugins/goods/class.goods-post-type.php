@@ -2,13 +2,13 @@
 /**
  * Create post type: goods
  */
-
 class GoodsPostType {
-	use GoodsFormFields;
+	use GoodsFormFields, GoodsColumns;
 	
 	function __construct() {
 		add_action('init', array ($this, 'create_goods'));
 		$this->metaboxes();
+		$this->columns();
 	}
 
 	public function create_goods() {
